@@ -1,0 +1,90 @@
+.contact__form {
+  grid-column: span 6 / span 6;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 48.125rem;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-rows: repeat(5, minmax(0, min-content));
+  column-gap: 1.875rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-top: 1.25rem;
+  }
+}
+
+.contact__form__input {
+  margin-bottom: unset;
+  grid-column: span 6 / span 6;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-column: span 3 / span 3;
+  }
+}
+
+#email {
+  grid-column: span 6 / span 6;
+}
+
+.contact__form__textarea {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: map-get($slate, "100");
+  grid-column: span 6 / span 6;
+  font-size: 1rem;
+  line-height: 1;
+  color: map-get($slate, "400");
+
+  &::placeholder {
+    font-size: 1rem;
+    line-height: 1;
+    color: map-get($slate, "400");
+  }
+}
+
+.contact__form__submit {
+  @extend .btn;
+  @extend .btn--primary;
+  color: $white;
+  margin-top: 1.25rem;
+  max-width: unset;
+  grid-column: span 6 / span 6;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-column: span 3 / span 3;
+  }
+}
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+  gap: 1.875rem;
+}
+
+.contact__right {
+  grid-column: span 6 / span 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 3.75rem;
+}
+
+.contact__right__heading {
+  margin-bottom: 1.25rem;
+}
+
+.contact__address,
+.contact__phone {
+  margin-bottom: 2.5rem;
+}
+
+.contact__info {
+  font-size: 1rem;
+  line-height: 1.33rem;
+  color: $chambray;
+  text-decoration: underline;
+}

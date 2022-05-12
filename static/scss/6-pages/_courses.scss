@@ -1,0 +1,22 @@
+.courses__wrapper {
+  @extend .hero__wrapper;
+}
+
+.courses__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3.75rem 2.5rem;
+  box-shadow: 0 10px 15px -3px rgba($black, 0.1),
+    0 4px 6px -4px rgba($black, 0.1);
+  text-align: center;
+}
+
+.courses__heading {
+  margin-bottom: 1.25rem;
+}
+
+.courses__excerpt {
+  margin-bottom: 2.5rem;
+}

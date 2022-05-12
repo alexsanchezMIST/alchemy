@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Rondal";
+  src: url("static/fonts/rondal/Rondal-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rondal";
+  src: url("static/fonts/rondal/Rondal-Semibold.otf") format("opentype");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rondal";
+  src: url("static/fonts/rondal/Rondal-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Public Sans";
+  src: url("static/fonts/public-sans/PublicSans-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+}

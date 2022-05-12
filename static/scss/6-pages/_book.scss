@@ -1,0 +1,60 @@
+.about__heading {
+  text-align: center;
+}
+
+.about__copy {
+  max-width: 65ch;
+  margin: 0 auto;
+}
+
+.content__heading {
+  @extend h3;
+  margin-bottom: 1.25rem;
+  font-family: "Public Sans", sans-serif;
+  color: #92782e;
+  letter-spacing: -0.025em;
+  text-align: center;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.content__excerpt {
+  margin: 0 auto;
+  padding: 5rem 3.75rem;
+  max-width: 48.125rem;
+  background-color: rgba($pearl, 0.5);
+  border: 2px solid $bone;
+  border-radius: 0.5rem;
+}
+
+.content__byline {
+  @extend h4;
+  margin-bottom: 1.25rem;
+}
+
+.preface__left {
+  @extend .lda__right;
+}
+
+.preface__right {
+  width: 100%;
+  height: 30rem;
+  background-image: url("static/img/fran-ebook.webp");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  box-shadow: 0 10px 15px -3px rgba($black, 0.1),
+    0 4px 6px -4px rgba($black, 0.1);
+}
+
+.preface__heading {
+  @extend .lda__heading;
+}
+
+.hero__mockup {
+  width: 75%;
+  height: auto;
+  filter: drop-shadow(0 12px 25px rgba($white, 0.2));
+}

@@ -1,0 +1,24 @@
+#hero {
+  overflow: hidden;
+}
+
+.container--about {
+  @extend .container;
+}
+
+.hero__wrapper--about {
+  @extend .hero__wrapper;
+}
+
+.hero__right--about {
+  position: relative;
+}
+
+.hero__img--about {
+  position: absolute;
+  right: 0;
+  bottom: -25rem;
+  width: auto;
+  height: 40rem;
+  filter: drop-shadow(0 25px 50px rgba($black, 0.25));
+}

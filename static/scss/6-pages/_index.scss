@@ -1,0 +1,207 @@
+// ********************
+// HERO SECTION
+// ********************
+
+#hero {
+  background-image: url("static/img/word-cloud.webp");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.hero__wrapper {
+  position: relative;
+  display: grid;
+  align-items: center;
+  grid-gap: 3.75rem;
+
+  @media screen and (min-width: map-get($breakpoints, "small")) and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+  }
+}
+
+.eyebrow {
+  font-size: 1.25rem;
+  line-height: 1.33;
+  font-weight: 600;
+  color: map-get($slate, "200");
+  margin-bottom: 1.25rem;
+}
+
+.hero__heading {
+  @extend h2;
+  font-weight: 700;
+  color: $white;
+  margin-bottom: 0.625rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.hero__subheading {
+  font-weight: 500;
+  color: map-get($slate, "300");
+}
+
+.hero__subheading + a {
+  margin-top: 0.625rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-top: 1.25rem;
+  }
+}
+
+.hero__form {
+  width: 100%;
+  max-width: 29.375rem;
+  margin-top: 0.625rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-top: 1.25rem;
+  }
+}
+
+.hero__mockup {
+  filter: brightness(125%);
+}
+
+// ********************
+// LDA SECTION
+// ********************
+
+.lda__wrapper {
+  @extend .hero__wrapper;
+}
+
+.lda__left {
+  width: 100%;
+  height: 30rem;
+  background-image: url("static/img/fran-leadership.webp");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+  box-shadow: 0 10px 15px -3px rgba($black, 0.1),
+    0 4px 6px -4px rgba($black, 0.1);
+}
+
+.lda__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+// ********************
+// FRAN SECTION
+// ********************
+
+.fran__left {
+  @extend .lda__right;
+}
+
+.fran__right {
+  @extend .lda__left;
+  background-image: url("static/img/fran-hat.webp");
+}
+
+.fran__wrapper {
+  @extend .hero__wrapper;
+}
+
+.lda__heading {
+  @media screen and (min-width: map-get($breakpoints, "small")) and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    margin-bottom: 0.625rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.lda__subheading {
+  @media screen and (min-width: map-get($breakpoints, "small")) and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
+    margin-bottom: 1.25rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.fran__heading {
+  @extend .lda__heading;
+}
+
+.fran__subheading {
+  @extend .lda__subheading;
+}
+
+// ********************
+// CTASECTION
+// ********************
+
+#cta {
+  background-image: url("static/img/cta-bg.webp");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+
+  > * {
+    position: relative;
+    z-index: 100;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 50;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $black;
+    opacity: 0.2;
+    mix-blend-mode: multiply;
+  }
+}
+
+.cta__wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 35.625rem;
+}
+
+.cta__heading {
+  @extend .hero__heading;
+}
+
+.cta__subheading {
+  @extend .hero__subheading;
+
+  margin-bottom: 0.625rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: 1.25rem;
+  }
+}
+
+form label {
+  display: none;
+}
+
+.form__disclaimer {
+  margin-top: 1.25rem;
+  font-size: 0.75rem;
+  line-height: 1;
+  color: map-get($slate, "300");
+}

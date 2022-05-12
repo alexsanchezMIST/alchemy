@@ -1,0 +1,31 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+{# BEGIN HERO SECTION #}
+<section id="thank-you" class="section py-18">
+    <div class="container">
+        <div class="hero__wrapper">
+            <div class="hero__left">
+                <h1 class="hero__heading--thank-you">Thank You!</h1>
+                <p class="hero__subheading">Thank you for purchasing the book! Your book will be shipped soon! Please check your email for your receipt.</p>
+            </div>
+            <div class="hero__right"></div>
+        </div>
+    </div>
+</section>
+{# END HERO SECTION #}
+
+{# BEGIN CONTENT SECTION #}
+<section id="content" class="section py-18">
+    <div class="container">
+        <article class="prose has-lead">
+            {{ post.content }}
+        </article>
+    </div>
+</section>
+{# END CONTENT SECTION #}
+
+{% include 'partial/cta.twig' %}
+
+{% endblock %}

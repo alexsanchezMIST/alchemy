@@ -1,0 +1,42 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+{# BEGIN HERO SECTION #}
+<section id="hero" class="section py-20">
+    <div class="container">
+        <div class="hero__wrapper">
+            <div class="hero__left">
+                <h1 class="hero__heading">Read the Blog</h1>
+                <p class="hero__subheading">(You can call her Fran.)</p>
+            </div>
+            <div class="hero__right"></div>
+        </div>
+    </div>
+</section>
+{# END HERO SECTION #}
+
+{# BEGIN POSTS SECTION #}
+<section id="posts" class="section py-18">
+    <div class="container">
+        <div class="posts__wrapper">
+            {% for post in posts %}
+            <a href="{{ post.link }}" class="post__card">
+                {% if post.thumbnail %}
+                <img src="{{ post.thumbnail }}" alt="" class="post__thumbnail">
+                {% endif %}
+                <div class="post__card__bottom">
+                    <p class="post__tag">Tag</p>
+                    <h3 class="post__heading">{{ post.title }}</h3>
+                    <p class="post__excerpt">{{ post.content|excerpt(10) }}</p>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{# END POSTS SECTION #}
+
+{% include 'partial/cta.twig' %}
+
+{% endblock %}

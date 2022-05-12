@@ -1,0 +1,87 @@
+{% extends "base.twig" %}
+
+{% block content %}
+{# BEGIN HERO SECTION #}
+<section id="hero" class="section py-20">
+    <div class="container">
+        <div class="hero__wrapper">
+            <div class="hero__left">
+                <h1 class="hero__heading">Extraorindary, distinctive leader from your foundation first!</h1>
+                <p class="hero__subheading">But, not without a leadership foundation & leadership brand that meets the needs of 21st century knowledge workers.</p>
+                <a href="https://buy.stripe.com/9AQ02GfKB65s2Yw9AA" target="_blank" class="btn btn--secondary">Purchase your copy now!</a>
+            </div>
+            <div class="hero__right">
+                <img src="{{ theme.path ~ '/static/img/fran-mockup2.webp' }}" alt="" class="hero__mockup">
+            </div>
+        </div>
+    </div>
+</section>
+{# END HERO SECTION #}
+
+{# BEGIN ABOUT SECTION #}
+<section id="about" class="section py-18">
+    <div class="container">
+        <h2 class="about__heading">About this book</h2>
+        <article class="prose mb-80">
+            <p>As a leader are you relevant to your knowledge workers and have you innovated your leadership model? Are you riding the leadership wave of change to help solve the leadership crisis?</p>
+            <p>f. Alexandra Brennan challenges leaders and students with these important business questions. What are the leadership challenges you are confronted with today? Solve the leadership crisis; earn knowledge worker trust and win back reputation to engage workers’ willpower; become positive, constructive leaders to win the hearts, minds and spirits of workers to harness their creativity; become relevant, people connected and action-oriented to gain followership; and create innovating and sustainable organizations that thrive collaboratively in a highly competitive, global economy.</p>
+            <p>These are substantial challenges for any leader and require a reflective, designing mind to solve them. f. Alexandra Brennan, author of The Power of Leadership Foundation First, teaches that it is possible to overcome these challenges, but not without a leadership foundation and brand concept that meets the needs of 21st century knowledge workers.</p>
+        </article>
+        <div class="btn-wrapper">
+            <a href="https://buy.stripe.com/9AQ02GfKB65s2Yw9AA" target="_blank" class="btn btn--primary">Purchase your copy now!</a>
+        </div>
+    </div>
+</section>
+{# END ABOUT SECTION #}
+
+{# BEGIN CONTENT SECTION #}
+<section id="content" class="section pb-18">
+    <div class="container">
+        <div class="content__excerpt">
+            <h2 class="content__heading">"[V]ery highly recommended reading for corporate executives ..."</h2>
+            <article>
+                <h3 class="content__byline">From the Midwest Book Review:</h3>
+                {{ post.content }}
+            </article>
+        </div>
+    </div>
+</section>
+{# END CONTENT SECTION #}
+
+{# BEGIN TESTIMONIAL SECTION #}
+<section id="testimonial" class="section py-10">
+    <div class="container">
+        <div class="testimonial__wrapper">
+            <p>"During my fifty year career as a college professor and president, I have read numerous books on leadership theory and practice. This book tops the list as it brings together basic principles of leadership theory and practical applications of successful leadership. The book is the result of thorough research which is well documented, and it gives the reader a feeling of involvement in the leadership process. It will be helpful for beginners in positions of leadership and for seasoned leaders who want a new perspective on leadership practice in a dynamically changing world." <strong>— K.P. Walker, Ph.D.</strong></p>
+        </div>
+    </div>
+</section>
+{# END TESTIMONIAL SECTION #}
+
+{# BEGIN PREFACE SECTION #}
+<section id="preface" class="section py-18">
+    <div class="container">
+        <div class="lda__wrapper">
+            <div class="preface__left">
+                <h2 class="preface__heading">Download the LFF book preface for free</h2>
+                <p class="preface__subheading">You were curious enough to pick up this book and that suggests to me that you realize you are not at the top of your game. You are concerned about the effectiveness of your leadership, what the media is saying about leaders and leadership, and the leadership crisis discussed at your association and Board meetings. You realize that both your education, which you have been relying on, and your status quo leadership model have not produced the results you had hoped for ...</p>
+                <form method="post" action="https://leadershipdesignalchemists.coachesconsole.com/optin" id="optin_6251c6dafbb5819117781f6a" class="hero__form">
+                    <label>First Name:</label>
+                    <input class="text hero__form__input" name="FirstName" type="text" placeholder="First name" required>
+                    <label>Email</label>
+                    <input class="text hero__form__input" name="Email" type="text" placeholder="Email" required>
+                    <input type="hidden" name="OptinID" id="optin_id_value" value="6251c6dafbb5819117781f6a">
+                    <input type="hidden" name="captcha_check" id="token"/>
+                    <button class="g-recaptcha btn btn--primary" data-sitekey="6LeiJO4ZAAAAAJ3etSaYUBMlfZ16Xw4N5z_F3rbD" data-callback='onSubmit'>Subscribe</button>
+                    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=6LeiJO4ZAAAAAJ3etSaYUBMlfZ16Xw4N5z_F3rbD"  async defer></script>
+                    <script src="https://coachesconsole.com/v3/static/optin.js?site_key=6LeiJO4ZAAAAAJ3etSaYUBMlfZ16Xw4N5z_F3rbD"></script>
+                </form>
+            </div>
+            <div class="preface__right"></div>
+        </div>
+    </div>
+</section>
+{# END PREFACE SECTION #}
+
+{% include 'partial/cta.twig' %}
+{% endblock %}

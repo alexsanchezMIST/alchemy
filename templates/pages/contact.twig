@@ -1,0 +1,52 @@
+{% extends "base.twig" %}
+
+{% block content %}
+{# BEGIN HERO SECTION #}
+<section id="hero" class="section py-20">
+    <div class="container">
+        <div class="hero__wrapper">
+            <div class="hero__left">
+                <h1 class="hero__heading">Distinctive leadership from your foundation first!</h1>
+                <p class="hero__subheading">Are you ready to take the next step toward controlling your own leadership destiny & building a truly extraordinary leadership legacy? I invite you to book a FREE 30-minute Clarity Call with Fran.</p>
+                <a href="https://leadershipdesignalchemists.coachesconsole.com/calendar/discovery-clarity-call-with-fran" target="_blank" class="btn btn--secondary">Book a call</a>
+            </div>
+            <div class="hero__right"></div>
+        </div>
+    </div>
+</section>
+{# END HERO SECTION #}
+
+{# BEGIN FORM SECTION #}
+<section id="contact-form" class="section py-18">
+    <div class="container">
+        <div class="contact__grid">
+            <form action="#" id="contact" class="contact__form">
+                <input id="first-name" class="contact__form__input" type="text" name="first-name" placeholder="First name" required>
+                <input id="last-name" class="contact__form__input" type="text" name="last-name" placeholder="Last name" required>
+                <input id="email" class="contact__form__input" type="email" name="email" placeholder="Enter your email address" required>
+                <textarea name="message" id="message" class="contact__form__textarea" cols="30" rows="10">Enter your message</textarea>
+                <button type="submit" value="Submit" class="contact__form__submit">Submit</button>
+            </form>
+            <div class="contact__right">
+                <div class="contact__address">
+                    <h4 class="contact__right__heading">Address:</h4>
+                    <p>2609 N. Forest Ridge Blvd.</p>
+                    <p>Suite 201</p>
+                    <p>Citrus Hills, FL 34442</p>
+                </div>
+                <div class="contact__phone">
+                    <h4 class="contact__right__heading">Phone Number:</h4>
+                    <a href="tel:3524501000" class="contact__info">(352) 450-1000</a>
+                </div>
+                <div class="contact__email">
+                    <h4 class="contact__right__heading">Email Address:</h4>
+                    <a href="mailto:falexandrabrennan@gmail.com" class="contact__info">falexandrabrennan@gmail.com</a>
+                </div>
+        </div>
+        </div>
+    </div>
+</section>
+{# END FORM SECTION #}
+
+{% include 'partial/cta.twig' %}
+{% endblock %}

@@ -1,0 +1,15 @@
+#testimonial {
+  background-color: map-get($slate, "50");
+}
+
+.testimonial__wrapper {
+  width: 100%;
+  max-width: 65ch;
+  margin: 0 auto;
+  text-align: center;
+
+  > p {
+    font-size: 1.25rem;
+    line-height: 1.33;
+  }
+}
