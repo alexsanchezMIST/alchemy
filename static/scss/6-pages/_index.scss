@@ -27,11 +27,13 @@
 }
 
 .eyebrow {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.33;
-  font-weight: 600;
-  color: map-get($slate, "200");
+  font-weight: 300;
+  color: #ffe74c;
+  letter-spacing: 0.05em;
   margin-bottom: 1.25rem;
+  text-transform: uppercase;
 }
 
 .hero__heading {
@@ -46,6 +48,8 @@
 }
 
 .hero__subheading {
+  font-size: 1rem;
+  line-height: 1.33;
   font-weight: 500;
   color: map-get($slate, "300");
 }
@@ -68,8 +72,15 @@
   }
 }
 
+.form__disclaimer {
+  margin-top: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.33;
+  color: map-get($slate, "300");
+}
+
 .hero__mockup {
-  filter: brightness(125%);
+  filter: brightness(150%);
 }
 
 // ********************
@@ -197,11 +208,4 @@
 
 form label {
   display: none;
-}
-
-.form__disclaimer {
-  margin-top: 1.25rem;
-  font-size: 0.75rem;
-  line-height: 1;
-  color: map-get($slate, "300");
 }

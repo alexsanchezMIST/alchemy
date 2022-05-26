@@ -110,3 +110,25 @@ nav {
   background-position: center center;
   background-size: contain;
 }
+
+.link-icon {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  background-image: url("static/img/external-link.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.phone-icon--blue {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  background-image: url("static/img/phone-blue.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}

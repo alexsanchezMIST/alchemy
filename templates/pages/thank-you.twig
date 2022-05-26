@@ -3,12 +3,12 @@
 {% block content %}
 
 {# BEGIN HERO SECTION #}
-<section id="thank-you" class="section py-18">
+<section id="hero" class="section py-18">
     <div class="container">
         <div class="hero__wrapper">
             <div class="hero__left">
-                <h1 class="hero__heading--thank-you">Thank You!</h1>
-                <p class="hero__subheading">Thank you for purchasing the book! Your book will be shipped soon! Please check your email for your receipt.</p>
+                <h1 class="hero__heading">Thank You!</h1>
+                <p class="hero__subheading">Now please check your inbox ... there is something very special on its way to you for your leadership success!</p>
             </div>
             <div class="hero__right"></div>
         </div>
@@ -22,10 +22,11 @@
         <article class="prose has-lead">
             {{ post.content }}
         </article>
+        <div class="btn-wrapper">
+            <a href="/about" class="btn btn--primary">Learn more about Fran</a>
+        </div>
     </div>
 </section>
 {# END CONTENT SECTION #}
-
-{% include 'partial/cta.twig' %}
 
 {% endblock %}
