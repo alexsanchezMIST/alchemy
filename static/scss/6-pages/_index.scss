@@ -3,7 +3,7 @@
 // ********************
 
 #hero {
-  background-image: url("static/img/word-cloud.webp");
+  background-image: url("static/img/fran-background.webp");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -14,11 +14,8 @@
   display: grid;
   align-items: center;
   grid-gap: 3.75rem;
-
-  @media screen and (min-width: map-get($breakpoints, "small")) and (max-width: (map-get($breakpoints, "large") - 0.0625rem)) {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    grid-template-rows: repeat(2, minmax(0, 1fr));
-  }
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, min-content));
 
   @media screen and (min-width: map-get($breakpoints, "large")) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -80,7 +77,33 @@
 }
 
 .hero__mockup {
-  filter: brightness(150%);
+  width: 20rem;
+  height: auto;
+  filter: brightness(100%);
+  transform: rotate(1.25deg);
+  filter: drop-shadow(0 12px 25px rgba($white, 0.2));
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    width: 30rem;
+  }
+}
+
+.hero__left {
+  order: 2;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    order: 1;
+  }
+}
+
+.hero__right {
+  display: grid;
+  place-items: center;
+  order: 1;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    order: 2;
+  }
 }
 
 // ********************
@@ -115,11 +138,21 @@
 
 .fran__left {
   @extend .lda__right;
+  order: 2;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    order: 1;
+  }
 }
 
 .fran__right {
   @extend .lda__left;
   background-image: url("static/img/fran-hat.webp");
+  order: 1;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    order: 2;
+  }
 }
 
 .fran__wrapper {

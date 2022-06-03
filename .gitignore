@@ -1,0 +1,8 @@
+vendor
+wp-content
+composer.lock
+.vscode
+node_modules
+index.js.map
+style.css.map
+.DS_Store

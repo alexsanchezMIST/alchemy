@@ -1,9 +1,55 @@
-{# This file demonstrates using most of the index.twig template and modifying 
-   just a small part. See `search.twig` for an example of another approach #}
-
-{% extends "index.twig" %}
+{% extends "base.twig" %}
 
 {% block content %}
-  <h3>This is my archive</h3>
-  {{ parent() }}
+
+{# BEGIN HERO SECTION #}
+<section id="hero" class="section py-20">
+    <div class="container">
+        <div class="hero__wrapper">
+            <div class="hero__left">
+              {% for category in categories %}
+                <h1 class="hero__heading">Read more posts in {{ category.name|lower }}</h1>
+              {% endfor %}
+              </div>
+            <div class="hero__right"></div>
+        </div>
+    </div>
+</section>
+{# END HERO SECTION #}
+
+{# BEGIN CATEGORIES SECTION #} 
+<section id="categories" class="section py-4">
+    <div class="container">
+        <div class="cat__wrapper">
+            {% for category in categories %} 
+            <a href="/category/{{ category.slug }}" class="cat__link">{{ category.name }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{# END CATEGORIES SECTION #}
+
+{# BEGIN POSTS SECTION #}
+<section id="posts" class="section py-18">
+    <div class="container">
+        <div class="posts__wrapper">
+            {% for post in posts %}
+            <a href="{{ post.link }}" class="post__card">
+                {% if post.meta('image') %}
+                <img src="{{ Image(post.meta('image')).src }}" alt="" class="post__thumbnail">
+                {% endif %}
+                <div class="post__card__bottom">
+                    <p class="post__tag">{{ post.category }}</p>
+                    <h3 class="post__heading">{{ post.title }}</h3>
+                    <p class="post__excerpt">{{ post.content|excerpt(10) }}</p>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{# END POSTS SECTION #}
+
+{% include 'partial/cta.twig' %}
+
 {% endblock %}

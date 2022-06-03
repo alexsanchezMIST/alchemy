@@ -23,7 +23,7 @@
         <div class="courses__wrapper">
             <div class="courses__left">
                 <h2 class="courses__heading">{{ post.title }}</h2>
-                <p class="courses__excerpt">{{ post.content|excerpt(10) }}</p>
+                <p class="courses__excerpt">{{ post.content|excerpt(30) }}</p>
                 <a href="{{ post.meta('course_link') }}" target="_blank" class="btn btn--primary"><span class="link-icon"></span>Register</a>
             </div>
         </div>

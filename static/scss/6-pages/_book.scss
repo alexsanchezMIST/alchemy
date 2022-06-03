@@ -22,11 +22,15 @@
 
 .content__excerpt {
   margin: 0 auto;
-  padding: 5rem 3.75rem;
+  padding: 2.5rem 1.875rem;
   max-width: 48.125rem;
   background-color: rgba($pearl, 0.5);
   border: 2px solid $bone;
   border-radius: 0.5rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    padding: 5rem 3.75rem;
+  }
 }
 
 .content__byline {
@@ -36,6 +40,11 @@
 
 .preface__left {
   @extend .lda__right;
+  order: 2;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    order: 1;
+  }
 }
 
 .preface__right {
@@ -47,14 +56,13 @@
   background-size: cover;
   box-shadow: 0 10px 15px -3px rgba($black, 0.1),
     0 4px 6px -4px rgba($black, 0.1);
+  order: 1;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    order: 2;
+  }
 }
 
 .preface__heading {
   @extend .lda__heading;
-}
-
-.hero__mockup {
-  width: 75%;
-  height: auto;
-  filter: drop-shadow(0 12px 25px rgba($white, 0.2));
 }

@@ -1,10 +1,23 @@
 #footer {
-  padding: 1.25rem 0;
   background-color: #090e1c;
 }
 
 .footer__brand {
-  @extend .nav__brand;
+  width: 12rem;
+  height: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("static/img/lda-logo-white.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  margin-bottom: 1.25rem;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    margin-bottom: unset;
+  }
 }
 
 .footer__logo {
@@ -16,19 +29,50 @@
 
 .footer__wrapper {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.footer__menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: map-get($breakpoints, "large")) {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
 }
 
 .footer__link {
-  @extend .nav__link;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1;
+  font-weight: 600;
+  border-radius: 0.25rem;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
   color: $white;
-  opacity: 0.75;
+  opacity: 0.5;
   transition: opacity 0.3s ease-in-out;
   margin: 0 0.625rem;
 
   &:hover {
     opacity: 1;
   }
+}
+
+.footer__copyright {
+  font-size: 0.875rem;
+  line-height: 1;
+  color: $white;
+  opacity: 0.5;
 }
